@@ -38,15 +38,15 @@
 
 		<div class="field">
 			<div class="control">
-				Quantity : <input type="text" name="quantity">
+				Quantity : <input type="text" name="quantity" required>
 			</div>
 		</div>
 
 		<div class="field">
-			<label class="label" for="order_description">Description :</label>
+			<label class="label" for="order_description">Remarks(If you have no any request, just input "No".) :</label>
 
 			<div class="control">
-					<textarea name="order_description"></textarea>
+					<textarea name="order_description" required></textarea>
 			</div>
 		</div>
 

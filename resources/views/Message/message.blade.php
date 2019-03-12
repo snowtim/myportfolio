@@ -30,14 +30,14 @@
 		<div class="field">
 			<label class="label" for="Title">Title</label>
 			<div class="control">
-				<input type="text" name="title">
+				<input type="text" name="title" required>
 			</div>
 		</div>
 
 		<div class="field">
 			<label class="label" for="content">Content</label>
 			<div class="control">
-				<textarea name="content"></textarea>
+				<textarea name="content" required></textarea>
 			</div>
 		</div>
 

@@ -65,16 +65,24 @@ class ProductController extends Controller
 	}
 
 	public function edit($id) {
+//dd(Auth::check());
+		if(Auth::check() == true) {
 
-		if(Auth::user()->adminright) {
+			if(Auth::user()->adminright) {
 
-			$product = Product::find($id);
+				$product = Product::find($id);
 
-			return view('Product.edit', compact('product'));
+				return view('Product.edit', compact('product'));
+
+			} else {
+
+				return view('home');
+
+			}
 
 		} else {
 
-			return view('home');
+			return redirect('/products');
 
 		}
 
