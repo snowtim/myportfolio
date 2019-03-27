@@ -8,7 +8,7 @@
 		Quantity : {{ $order->quantity }}</br>
 		Total Price : {{ $order->total_price }}</br>
 		Order Description : {{ $order->order_description }}
-		<form method="POST" action="/cart">
+		<form method="POST" action="/order/buy">
 			@method('DELETE')
 			@csrf
 			<div class="field">
