@@ -6,7 +6,26 @@
 
   <section class="page-section clearfix">
     <div class="container">
-      <div class="intro">
+      @foreach($products->chunk(3) as $productchunk)
+        <div class="row">
+          @foreach($productchunk as $product)
+            <div class="col-sm-6 col-md-4">
+              <div class="card" style="width: 12rem;">
+                <img src="/~/formal/flowerofspring/public/webimg/{{ $product->pic_name }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ $product->title }}</h5>
+                    <p class="card-text">{{ $product->description }}</p>
+                      <div class="clearfix">
+                        <div class="pull-left price">${{ $product->price }}</div>
+                      </div>
+                    <a href="/add-to-cart/{{ $product->id }}" class="btn btn-primary">Add to Cart</a>
+                  </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      @endforeach
+      <!--div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="~/formal/flowerofspring/public/webimg/paCWoaCWkqOZrKSY.jpg" alt="">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
@@ -19,7 +38,7 @@
             <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
           </div>
         </div>
-      </div>
+      </div-->
     </div>
   </section>
 

@@ -26,7 +26,8 @@ Route::get('/intro', function () {
 });
 
 //Product
-Route::get('/products', 'ProductController@productindex');
+/*Route::get('/products', 'ProductController@productindex');*/
+Route::get('/', 'ProductController@productindex');
 Route::get('/products/create', 'ProductController@create');
 Route::post('/products/create', 'ProductController@store');
 Route::get('/products/{product}', 'ProductController@show');
