@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Product;
 
+use Session;
+
 class ProductController extends Controller
 {	
 
@@ -61,7 +63,8 @@ class ProductController extends Controller
 	public function show($id) {
 
 		$product = Product::where('id', '=', $id)->get(); 
-
+		//dd(session());
+		//dd($product->first());
 		return view('Product.show', compact('product'));
 
 	}

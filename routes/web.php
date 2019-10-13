@@ -46,3 +46,6 @@ Route::post('/contact', 'MessageController@store');
 Route::get('/contact/{contact}/edit', 'MessageController@edit');	
 Route::patch('/contact/{contact}/edit', 'MessageController@update');
 Route::delete('/contact', 'MessageController@destroy');
+
+//Cart
+Route::get('/add-to-cart/{id}', 'ProductController@show');
