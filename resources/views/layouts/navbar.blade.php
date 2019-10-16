@@ -23,9 +23,9 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/intro">About</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <!--li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/products">Products</a>
-          </li>
+          </li-->
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/order/buy">Your Order</a>
           </li>

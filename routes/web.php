@@ -48,4 +48,6 @@ Route::patch('/contact/{contact}/edit', 'MessageController@update');
 Route::delete('/contact', 'MessageController@destroy');
 
 //Cart
-Route::get('/add-to-cart/{id}', 'ProductController@show');
+//Route::get('/add-to-cart/{id}', 'ProductController@show');
+Route::get('/add-to-cart/{id}', 'ProductController@addtocart');
+Route::get('/shoppingcart', 'ProductController@shoppingcart');
