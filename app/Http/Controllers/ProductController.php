@@ -26,11 +26,14 @@ class ProductController extends Controller
 
 	public function create() {
 
-		if(Auth::user()->adminright) {
-			return view('Product.create');
-		} else {
-			return view('home');
+		if(Auth::check() == true) {
+			if(Auth::user()->adminright) {
+				return view('Product.create');
+			} else {
+				return view('home');
+			}
 		}
+		return redirect('/');
 
 	}
 
@@ -57,7 +60,7 @@ class ProductController extends Controller
 
 		$request->file('picture')->move('~/formal/flowerofspring/public/webimg/', Product::where('product_id', $request['product_id'])->get()->first()->pic_name);
 
-		return redirect('/products');
+		return redirect('/');
 
 	}
 
@@ -109,7 +112,7 @@ class ProductController extends Controller
 			'price' => $request['price']
 		]);
 
-		return redirect('/products');
+		return redirect('/');
 
 	}
 
@@ -119,7 +122,8 @@ class ProductController extends Controller
 
 		$product->delete();
 
-		return redirect('/products');
+		//return redirect('/products');
+		return redirect('/');
 
 	}
 
